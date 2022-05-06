@@ -16,8 +16,6 @@ jobs:
     name: Learn
     runs-on: ubuntu-20.04
 
-    steps:
-      - name: Checkout Source Files
         uses: actions/checkout@v3
 
       - name: Generate Crowdin Config
@@ -26,8 +24,6 @@ jobs:
           PLUGIN: 'generate-config'
           PROJECT_NAME: 'curriculum'
 
-      - name: Crowdin Upload
-        uses: crowdin/github-action@master
         # options: https://github.com/crowdin/github-action/blob/master/action.yml
         with:
           # uploads
